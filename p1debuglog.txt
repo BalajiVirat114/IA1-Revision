@@ -1,0 +1,30 @@
+(gdb) b main
+Breakpoint 1 at 0x7fc: file p1final.c, line 16.
+(gdb) r
+Starting program: /home/runner/IA1-Revision-1/a.out 
+warning: Error disabling address space randomization: Operation not permitted
+
+Breakpoint 1, main () at p1final.c:16
+16  {
+(gdb) n
+18    input(&a,&b);
+(gdb) n
+Enter two numbers
+12
+12
+19    add(a,b,&sum);
+(gdb) s
+add (a=12, b=12, sum=0x7ffd32a36f84) at p1final.c:9
+9     *sum=a+b;
+(gdb) n
+10  }
+(gdb) n
+main () at p1final.c:20
+20    output(a,b,sum);
+(gdb) n
+Sum of 12 + 12 is 24
+21    return 0;
+(gdb) c
+Continuing.
+[Inferior 1 (process 517) exited normally]
+(gdb)
